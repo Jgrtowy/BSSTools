@@ -1,16 +1,16 @@
-<nav class="h-12 w-screen bg-amber-400 text-black flex items-center justify-around">
+<nav class="h-16 w-screen bg-amber-400 text-black flex items-center justify-around text-xl">
 	<div>
 		<a href="/" class="flex items-center gap-3">
 			<img
 				src="/icon.webp"
 				alt="basic bee"
-				class="w-16 aspect-square transition hover:scale-125 hover:-rotate-12"
+				class="w-24 aspect-square transition hover:scale-125 hover:-rotate-12"
 			/>
-			<h1>BSSTools</h1>
+			<h1 class="hidden md:block">BSSTools</h1>
 		</a>
 	</div>
 	<div />
-	<div class="flex gap-6">
+	<div class="flex md:gap-6 text-center">
 		<a href="/bond">Bond Calculator</a>
 		<a href="/blender">Blender Calculator</a>
 		<a href="/beesmas">Beesmas Countdown</a>

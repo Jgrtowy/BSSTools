@@ -74,9 +74,9 @@
 
 <title>Bond Calculator</title>
 <div class="flex gap-5 h-screen items-center justify-start w-screen mt-5 flex-col">
-	<div class="flex items-start w-max gap-16 justify-around">
+	<div class="flex items-start md:w-max md:gap-16 justify-around md:flex-row flex-col gap-5">
 		<div
-			class="flex flex-col items-center justify-center h-full border-2 border-white rounded-xl p-5 gap-2 w-64"
+			class="flex flex-col items-center justify-center h-full border-2 border-white rounded-xl p-5 gap-2 md:w-64 w-96"
 		>
 			<h1 class="text-5xl mb-4">Current</h1>
 			<h2>Level</h2>
@@ -99,7 +99,7 @@
 			/>
 		</div>
 		<div
-			class="flex flex-col items-center justify-start border-2 border-white h-full rounded-xl p-5 gap-2 w-64"
+			class="flex flex-col items-center justify-start border-2 border-white h-full rounded-xl p-5 gap-2 md:w-64 w-96"
 		>
 			<h1 class="text-5xl mb-4">Target</h1>
 			<h2>Level</h2>
@@ -120,7 +120,9 @@
 	{#if calculated === -1}
 		<h1 class="text-5xl mt-5">Wrong information</h1>
 	{:else if calculated === 1}
-		<div class="text-2xl flex flex-col p-5 border-2 border-white rounded-lg gap-3">
+		<div
+			class="text-2xl flex flex-col p-5 border-2 border-white rounded-lg gap-3 md:max-w-max w-96"
+		>
 			<h1 class="text-5xl">You need:</h1>
 			<div class="text-lg flex items-center gap-2">
 				<h1 class="block w-8 text-2xl">💖</h1>
