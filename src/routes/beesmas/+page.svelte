@@ -14,6 +14,7 @@
 
 <style scoped lang="scss">
 	h1 {
-		font-family: 'Comic Neue', cursive;
+		font-family: 'Comic Neue';
+		font-weight: bold;
 	}
 </style>

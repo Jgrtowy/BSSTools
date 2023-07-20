@@ -5,6 +5,6 @@
 
 <style scoped lang="scss">
 	div {
-		font-family: 'Comic Neue', cursive;
+		font-family: 'Comic Neue';
 	}
 </style>
