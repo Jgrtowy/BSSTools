@@ -13,7 +13,7 @@
 	<div class="flex gap-6">
 		<a href="/bond">Bond Calculator</a>
 		<a href="/blender">Blender Calculator</a>
-		<a href="/">todo</a>
+		<a href="/beesmas">Beesmas Countdown</a>
 	</div>
 </nav>
 
