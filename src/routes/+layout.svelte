@@ -3,9 +3,11 @@
 	import Navbar from '../components/Navbar.svelte';
 </script>
 
-<Navbar />
-<div class="dark:text-white dark:bg-gray-950 w-screen h-screen overflow-hidden">
-	<slot />
+<div class="dark:text-white dark:bg-gray-950 w-screen h-screen">
+	<Navbar />
+	<div class="h-max mb-5">
+		<slot />
+	</div>
 </div>
 
 <style scoped>
@@ -46,5 +48,6 @@
 	* {
 		font-family: 'Inter';
 		font-weight: 400;
+		box-sizing: border-box;
 	}
 </style>

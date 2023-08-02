@@ -1,21 +1,13 @@
 <script lang="ts">
 	import type checkLevels from '$lib/types/checkLevels';
 	import type requiredItems from '$lib/types/requiredItems';
+	import validateInput from '$lib/validateInput';
 	import axios from 'axios';
 
 	let currentLvl: HTMLSelectElement;
 	let targetLvl: HTMLSelectElement;
 	let currentBond: HTMLInputElement;
 	let calculated: number = 0;
-
-	const validateInput = (e: Event) => {
-		if (e.target instanceof HTMLInputElement) {
-			const value = e.target.value;
-			if (value.length < 0 || value === '') {
-				e.target.value = value.slice(0, 1);
-			}
-		}
-	};
 
 	let required = { bond: 0, treats: 0, honey: 0 } satisfies requiredItems;
 	let abbreviated = { bond: '0', treats: '0', honey: '0' } satisfies requiredItems;
@@ -73,7 +65,7 @@
 </script>
 
 <title>Bond Calculator</title>
-<div class="flex gap-5 h-screen items-center justify-start w-screen mt-5 flex-col">
+<div class="flex gap-5 items-center justify-start w-screen mt-5 flex-col">
 	<div class="flex items-start md:w-max md:gap-16 justify-around md:flex-row flex-col gap-5">
 		<div
 			class="flex flex-col items-center justify-center h-full border-2 border-white rounded-xl p-5 gap-2 md:w-64 w-96"
@@ -81,7 +73,7 @@
 			<h1 class="text-5xl mb-4">Current</h1>
 			<h2>Level</h2>
 			<select
-				class="rounded-lg pl-3 border-2 border-white bg-transparent w-24 text-center"
+				class="rounded-lg pl-3 border-2 border-white bg-transparent w-24 text-center hover:bg-gray-800 transition-colors duration-300"
 				bind:this={currentLvl}
 			>
 				{#each { length: 25 } as _, i}
@@ -92,7 +84,7 @@
 			<input
 				type="number"
 				min="0"
-				class="rounded-lg border-2 border-white bg-transparent w-52"
+				class="rounded-lg border-2 border-white bg-transparent w-52 hover:bg-gray-800 transition-colors duration-300"
 				placeholder="0"
 				on:input={validateInput}
 				bind:this={currentBond}
@@ -104,7 +96,7 @@
 			<h1 class="text-5xl mb-4">Target</h1>
 			<h2>Level</h2>
 			<select
-				class="rounded-lg pl-3 border-2 border-white bg-transparent w-24 text-center"
+				class="rounded-lg pl-3 border-2 border-white bg-transparent w-24 text-center hover:bg-gray-800 transition-colors duration-300"
 				bind:this={targetLvl}
 			>
 				{#each { length: 24 } as _, i}
